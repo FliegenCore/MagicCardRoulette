@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a64e5b0e436d4bed9780211ae245f7b, type: 3}
+  m_Name: baff_invert_Data
+  m_EditorClassIdentifier: 
+  dataName: baff_invert
+  dragonBonesJSON: {fileID: 4900000, guid: 5b5cec608bde7d14796aa7e869ac97fc, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: adc66de6f9b6dd041bae33501ba96cbe, type: 3}
+    texture: {fileID: 2800000, guid: cff1a18b7f991a84ba01b951c78c531d, type: 3}
+    material: {fileID: 2100000, guid: 7d740865dfebbaa4a9842be0444d903c, type: 2}
+    uiMaterial: {fileID: 0}

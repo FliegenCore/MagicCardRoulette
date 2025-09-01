@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a64e5b0e436d4bed9780211ae245f7b, type: 3}
+  m_Name: baff_watcher_Data
+  m_EditorClassIdentifier: 
+  dataName: baff_watcher
+  dragonBonesJSON: {fileID: 4900000, guid: 18b83c2927c65ec49bfd368f11f92808, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: 7181993dd2370c14a987f1ed495ebdd4, type: 3}
+    texture: {fileID: 2800000, guid: 44eb2708fa498b243b995deda6c1e0d2, type: 3}
+    material: {fileID: 2100000, guid: 82ed5dc62593d6247a8ed03d4a3db626, type: 2}
+    uiMaterial: {fileID: 0}

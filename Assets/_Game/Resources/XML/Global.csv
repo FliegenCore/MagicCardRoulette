@@ -1,0 +1,8 @@
+;Ru;En
+description_angel;Ангел: Спросить про верхнюю карту.;Angel: Ask about the top card.
+description_health;Аптечка: Добавляет 1 здоровье (не больше 6).;First Aid Kit: Adds 1 health (max 6).
+description_hand;Рука: Удаляет верхнюю карту.;Hand: Removes the top card.
+description_doubledamage;Умная голова: двойной урон у следующей карты.;Smart Head: Double damage on next card.
+description_lock;Замок: блокирует следующий ход оппонента.;Lock: Blocks the opponent's next move.
+description_yinyang;Инь и Ян: Меняет верхнюю карту с заряженной на пустую и наоборот.;Yin and Yang: Changes the top card from charged to empty and vice versa.
+;;

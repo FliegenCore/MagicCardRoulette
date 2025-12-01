@@ -6,6 +6,7 @@ using _Game.Scripts.CharactersSystem.Player;
 using _Game.Scripts.Items;
 using _Game.Scripts.PlayerInput;
 using Game.ServiceLocator;
+using GameAnalyticsSDK;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -39,6 +40,8 @@ namespace _Game.Scripts.RoundsSystem
             GameOver = true;
             G.Get<InputRoot>().HardDisable();
             G.Get<PlayerController>().PlayerView.Death(SpawnLoseCanvas);
+
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, $"round {_playerWinCount}");
         }
 
         private void SpawnLoseCanvas()
@@ -55,13 +58,17 @@ namespace _Game.Scripts.RoundsSystem
         
         private void OnEnemyDeath()
         {
-            Debug.Log("enemy death");
             G.Get<DeckController>().DestroyAllCards();
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, $"round {_playerWinCount}");
             _playerWinCount++;
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, $"round {_playerWinCount}");
+            Debug.Log($"<color=green>{_playerWinCount}</color>");
+
             G.Get<InputRoot>().Disable();
             _roundsView.EnableCrests(_playerWinCount);
             if (_playerWinCount >= 3)
             {
+                GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, $"GAME COMPLETE");
                 G.Get<EnemyController>().EnemyView.Death(SpawnWinCanvas);
                 GameOver = true;
             }

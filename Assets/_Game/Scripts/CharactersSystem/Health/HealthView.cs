@@ -47,6 +47,20 @@ namespace _Game.Scripts.CharactersSystem
 
         public void RemoveHealth(int count)
         {
+            if(_healthCount <= count)
+            {
+                for (int i = _healthCount; i > 0; i--)
+                {
+                    var anim = _health[_healthCount - i].animation.Play("minus");
+                    StartCoroutine(DisableHealth(anim._duration, _health[_healthCount - i]));
+                }
+
+                _healthCount = 0;
+
+
+                return;
+            }
+
             for (int i = count; i > 0; i--)
             {
                 var anim = _health[_healthCount - i].animation.Play("minus");

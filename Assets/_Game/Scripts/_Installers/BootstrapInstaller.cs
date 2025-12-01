@@ -2,6 +2,7 @@
 using _Game.Scripts.SceneManagment;
 using _Game.Scripts.TranslateSystem;
 using Game.ServiceLocator;
+using GameAnalyticsSDK;
 using UnityEngine;
 
 namespace _Game.Scripts._Installers
@@ -16,6 +17,8 @@ namespace _Game.Scripts._Installers
 
         private void Register()
         {
+            GameAnalytics.Initialize();
+            GameAnalytics.SetCustomId("myCustomUserId");
             G.Register(new Translator(), ServiceLifetime.Singleton);
             G.InstantiateAndRegisterService<RoutineStarter>(ServiceLifetime.Singleton);
             G.Register(new FadeController(), ServiceLifetime.Singleton);
